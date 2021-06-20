@@ -1,8 +1,6 @@
-// import gulp from 'gulp'
+import gulp from 'gulp'
 
-// gulp.task('build', (done) => {
-//     gulp.series('clean');
-//     done();
-// }, (a) => {
-//     console.log('finishhh', a)
-// })
+
+gulp.task('build', gulp.series('clean',
+    gulp.parallel('manifest', 'pages')
+));

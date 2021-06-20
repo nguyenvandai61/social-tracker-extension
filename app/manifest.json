@@ -2,10 +2,18 @@
     "name": "Time tracker",
     "version": "0.1.1",
     "manifest_version": 2,
-    "permission": [
-
+    "description": "Time track social network",
+    "permissions": [
+        "activeTab",
+        "notifications",
+        "storage"
     ],
-    "page_action": {
+    "options_page": "pages/options.html",
+    "options_ui": {
+      "page": "pages/options.html",
+      "chrome_style": true
+    },
+    "browser_action": {
         "default_popup": "pages/popup.html"
     }
 }

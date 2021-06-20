@@ -1,4 +1,12 @@
-import requireDir from 'require-dir'
+import gulp from 'gulp'
+import './tasks/manifest'
+import './tasks/clean'
+import './tasks/pages'
 
-console.log('gulp run')
-requireDir('./tasks', {recurse: true})
+
+import './tasks/build'
+
+gulp.task('default', 
+    // gulp.series('build')
+    gulp.series('build')
+)
